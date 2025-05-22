@@ -50,7 +50,25 @@ def handle_label(service):
     phishing_label = service.users().labels().create(userId='me', body=phishing_label_object).execute()
     return phishing_label["id"]
 
+def set_as_phishing(service, email_id):
+    print("email_id", email_id)
 
+
+    phishing_label_id = handle_label(service)
+
+    # sets as phishing
+    service.users().messages().modify(
+        userId='me',
+        id=email_id,
+        body={'addLabelIds': [phishing_label_id]}
+    ).execute()
+
+    # sets as spam
+    service.users().messages().modify(
+        userId='me',
+        id=email_id,
+        body={'addLabelIds': ["SPAM"]}
+    ).execute()
 
 if __name__ == "__main__":
     service = authenticate_gmail()
