@@ -1,0 +1,6 @@
+env
+credentials.json
+token.json
+phishing_model.pkl
+vectorizer.pkl
+__pycache__
