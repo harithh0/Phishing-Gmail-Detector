@@ -10,8 +10,7 @@ This project uses machine learning to automatically detect and flag phishing ema
 
 
 ### Showcase
-![video](https://youtu.be/MRiKsjDFA4A?feature=shared)
-
+[![Watch the demo](thumbnail.png)](https://youtu.be/MRiKsjDFA4A?feature=shared)
 
 ### Description
 
@@ -31,6 +30,7 @@ After the model calculates the result, if it turns out to be flagged as phishing
 - Gmail API
 - Flask
 - Zapier
+- Ngrok - for proxy to my Flask app without port forwarding
 
 
 
