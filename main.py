@@ -8,12 +8,12 @@ app = Flask(__name__)
 @app.route('/email-webhook', methods=['POST'])
 def receive_email():
     data = request.json
-    print(data.keys())
-    print(data)
-    print("Received Email:")
-    print("From:", data.get("from_email"))
-    print("Subject:", data.get("subject"))
-    print("Body:", data.get("email"))
+    # print(data.keys())
+    # print(data)
+    # print("Received Email:")
+    # print("From:", data.get("from_email"))
+    # print("Subject:", data.get("subject"))
+    # print("Body:", data.get("email"))
 
 
 
@@ -23,6 +23,7 @@ def receive_email():
     if result == 1:
         service = gmail_implementation.authenticate_gmail()
         gmail_implementation.set_as_phishing(service, data.get("email_id"))
+        print(f"Email {data.get('subject')} has been flagged as phishing")
 
     return jsonify({"status": "received"}), 200
 
