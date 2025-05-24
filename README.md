@@ -38,4 +38,4 @@ After the model calculates the result, if it turns out to be flagged as phishing
 
 - Implement false positive feedback
     - Use this feedback to fine tune and improve model
-- Implement Pub/Sub for more control over real-time email updates
+- Implement Pub/Sub for more control over real-time email updates instead of using Zapier
