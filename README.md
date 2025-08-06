@@ -1,4 +1,4 @@
-## Gmail Phishing Classifier using AI
+## Gmail Phishing Detector using AI
 
 This project uses machine learning to automatically detect and flag phishing emails in real-time using the Gmail API, Zapier, and a Hugging Face transformer model.
 
