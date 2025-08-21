@@ -16,7 +16,7 @@ This project uses machine learning to automatically detect and flag phishing ema
 
 Using [this](https://huggingface.co/ealvaradob/bert-finetuned-phishing) Hugging Face transformer, made by [ealvaradob](https://huggingface.co/ealvaradob/) and python Transformers & PyTorch library, I was able to create a function that would take email data and send it to the AI model. Then the model outputs 0 (safe) or 1 (phishing) flag and a confidence score all happening locally.
 
-In the beggining I tried training my own model using data I found online, but it was both time consuming and difficult to get right. The data I found was either not well formatted or did not have enough entries. It did ended up working however, it was very innaccurate at times. So I just decided to use the premade model and fine tune it to my likeing.
+In the beggining I tried training my own model using data I found online, but it was both time consuming and difficult to get right. The data I found was either not well formatted or did not have enough entries and my machine was not capable of training an AI model from scratch. However, it did end up working, but was very innaccurate at times. So I just decided to use the premade model and fine tune it to my likeing.
 
 ### Workflow
 
